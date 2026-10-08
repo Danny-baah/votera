@@ -33,7 +33,7 @@ export const HeroNavbar = forwardRef(function HeroNavbar(
     >
       <div className="navbar-inner">
         {/* BRAND LOGO */}
-        <a href="#" className="brand-logo" aria-label="Volterra Electrical Engineering">
+        <a href="#home" className="brand-logo" aria-label="LOGO">
           <div className="brand-mark">
             <svg
               className="brand-lightning"
@@ -48,27 +48,26 @@ export const HeroNavbar = forwardRef(function HeroNavbar(
             </svg>
           </div>
           <div className="brand-text-col">
-            <span className="brand-name">VOLTERRA</span>
-            <span className="brand-subtitle">ELECTRICAL ENGINEERING</span>
+            <span className="brand-name">LOGO</span>
           </div>
         </a>
 
         {/* CENTER NAVIGATION */}
-        <nav className="desktop-nav" aria-label="Main Navigation">
+        <nav className="desktop-nav" aria-label="Hauptnavigation">
           <a href="#home" className="nav-link active">
-            HOME
+            START
             <span className="nav-active-pill" />
           </a>
-          <a href="#services" className="nav-link">SERVICES</a>
-          <a href="#work" className="nav-link">OUR WORK</a>
-          <a href="#about" className="nav-link">ABOUT</a>
-          <a href="#contact" className="nav-link">CONTACT</a>
+          <a href="#services" className="nav-link">LEISTUNGEN</a>
+          <a href="#work" className="nav-link">UNSERE ARBEIT</a>
+          <a href="#about" className="nav-link">ÜBER UNS</a>
+          <a href="#contact" className="nav-link">KONTAKT</a>
         </nav>
 
         {/* RIGHT ACTION */}
         <div className="navbar-actions">
-          <a href="#quote" className="quote-button">
-            <span>GET A QUOTE</span>
+          <a href="#contact" className="quote-button">
+            <span>ANGEBOT ANFRAGEN</span>
             <ArrowRight size={15} className="quote-arrow" />
           </a>
 
@@ -76,7 +75,7 @@ export const HeroNavbar = forwardRef(function HeroNavbar(
             type="button"
             className="mobile-toggle"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle navigation menu"
+            aria-label="Navigation umschalten"
           >
             {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -86,13 +85,13 @@ export const HeroNavbar = forwardRef(function HeroNavbar(
       {/* MOBILE FLYOUT */}
       {mobileMenuOpen && (
         <div className="mobile-menu-drawer">
-          <a href="#home" onClick={() => setMobileMenuOpen(false)} className="mobile-link active">HOME</a>
-          <a href="#services" onClick={() => setMobileMenuOpen(false)} className="mobile-link">SERVICES</a>
-          <a href="#work" onClick={() => setMobileMenuOpen(false)} className="mobile-link">OUR WORK</a>
-          <a href="#about" onClick={() => setMobileMenuOpen(false)} className="mobile-link">ABOUT</a>
-          <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="mobile-link">CONTACT</a>
-          <a href="#quote" onClick={() => setMobileMenuOpen(false)} className="mobile-quote-btn">
-            <span>GET A QUOTE</span>
+          <a href="#home" onClick={() => setMobileMenuOpen(false)} className="mobile-link active">START</a>
+          <a href="#services" onClick={() => setMobileMenuOpen(false)} className="mobile-link">LEISTUNGEN</a>
+          <a href="#work" onClick={() => setMobileMenuOpen(false)} className="mobile-link">UNSERE ARBEIT</a>
+          <a href="#about" onClick={() => setMobileMenuOpen(false)} className="mobile-link">ÜBER UNS</a>
+          <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="mobile-link">KONTAKT</a>
+          <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="mobile-quote-btn">
+            <span>ANGEBOT ANFRAGEN</span>
             <ArrowRight size={16} />
           </a>
         </div>

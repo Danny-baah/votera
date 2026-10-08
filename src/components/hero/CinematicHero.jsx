@@ -144,7 +144,7 @@ export function CinematicHero() {
 
         {/* SIDE STORYLINE NAVIGATION (Interactive Milestones) */}
         {!isReducedMotion && (
-          <aside className="storyline-timeline" aria-label="Story Progression">
+          <aside className="storyline-timeline" aria-label="Story-Verlauf">
             <div className="timeline-rail">
               {STORY_STAGES.map((s) => {
                 const isActive = activeStage >= s.id;
@@ -155,7 +155,7 @@ export function CinematicHero() {
                     type="button"
                     onClick={() => scrollToMilestone(s.progress)}
                     className={`timeline-node ${isActive ? 'active' : ''} ${isCurrent ? 'current' : ''}`}
-                    title={`Jump to ${s.name}`}
+                    title={`Zu ${s.name} springen`}
                   >
                     <span className="node-marker" />
                     <span className="node-label">{s.name}</span>
@@ -177,7 +177,7 @@ export function CinematicHero() {
 
         {/* ASSET CACHE STREAM STATUS */}
         {loadProgress < 100 && (
-          <div className="load-progress-pill" title={`Preloading frames: ${loadProgress}%`}>
+          <div className="load-progress-pill" title={`Bilder vorladen: ${loadProgress}%`}>
             <Sparkles size={11} className="load-spin-icon" />
             <span>SYNCHRONISIERE DATEN {loadProgress}%</span>
           </div>

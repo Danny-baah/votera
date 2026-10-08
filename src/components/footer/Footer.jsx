@@ -10,14 +10,13 @@ export function Footer() {
           <div className="footer-brand">
             <div className="footer-logo">
               <Zap size={18} className="footer-logo-icon" />
-              <span className="footer-brand-name">VOLTERRA</span>
+              <span className="footer-brand-name">LOGO</span>
             </div>
-            <span className="footer-brand-sub">ELEKTROTECHNIK</span>
           </div>
 
           {/* Quick Nav Links */}
-          <nav className="footer-nav" aria-label="Footer Navigation">
-            <a href="#home" className="footer-nav-link">Home</a>
+          <nav className="footer-nav" aria-label="Fußzeilennavigation">
+            <a href="#home" className="footer-nav-link">Start</a>
             <a href="#services" className="footer-nav-link">Leistungen</a>
             <a href="#kontakt" className="footer-nav-link">Kontakt</a>
             <a href="#impressum" className="footer-nav-link">Impressum</a>
@@ -27,7 +26,7 @@ export function Footer() {
 
         <div className="footer-bottom-row">
           <p className="footer-copy">
-            © 2026 VOLTERRA Elektrotechnik GmbH. Alle Rechte vorbehalten.
+            © 2026 LOGO. Alle Rechte vorbehalten.
           </p>
           <p className="footer-location">
             München · Frankfurt · Hamburg
