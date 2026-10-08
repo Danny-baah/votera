@@ -1,0 +1,207 @@
+.hero-navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: background-color 0.4s ease, border-bottom 0.4s ease;
+  pointer-events: auto;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 3.5rem;
+}
+
+/* BRAND LOGO */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: var(--text-pure);
+  filter: drop-shadow(0 0 8px rgba(143, 223, 255, 0.4));
+}
+
+.brand-lightning {
+  width: 20px;
+  height: 20px;
+  color: var(--text-pure);
+}
+
+.brand-text-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--text-pure);
+  line-height: 1.1;
+}
+
+.brand-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  color: rgba(245, 244, 239, 0.55);
+  margin-top: 2px;
+}
+
+/* CENTER NAVIGATION */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 2.8rem;
+}
+
+.nav-link {
+  position: relative;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 400; /* Thin, light typography matching reference */
+  letter-spacing: 0.18em;
+  color: rgba(245, 244, 239, 0.7);
+  transition: color 0.25s ease;
+  padding-bottom: 4px;
+}
+
+.nav-link:hover {
+  color: var(--text-pure);
+}
+
+.nav-link.active {
+  color: var(--text-pure);
+}
+
+.nav-active-pill {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: var(--amber-gold);
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(201, 161, 90, 0.6);
+}
+
+/* RIGHT ACTIONS */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.quote-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 9999px;
+  background: rgba(8, 17, 29, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--text-pure);
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.quote-button:hover {
+  background: rgba(201, 161, 90, 0.1);
+  border-color: rgba(201, 161, 90, 0.6);
+  box-shadow: 0 0 16px rgba(201, 161, 90, 0.2);
+  transform: translateY(-1px);
+}
+
+.quote-arrow {
+  color: var(--amber-gold);
+  transition: transform 0.25s ease;
+}
+
+.quote-button:hover .quote-arrow {
+  transform: translateX(3px);
+  color: #ffffff;
+}
+
+.mobile-toggle {
+  display: none;
+  color: #ffffff;
+  padding: 0.4rem;
+}
+
+/* MOBILE FLYOUT */
+.mobile-menu-drawer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(9, 13, 20, 0.98);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 2rem 2.5rem 2rem;
+  gap: 1.2rem;
+}
+
+.mobile-link {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.5rem 0;
+}
+
+.mobile-link.active {
+  color: var(--amber-gold);
+}
+
+.mobile-quote-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 9999px;
+  background: rgba(251, 191, 36, 0.15);
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  color: #ffffff;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 900px) {
+  .navbar-inner {
+    padding: 1.2rem 1.8rem;
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-toggle {
+    display: block;
+  }
+}

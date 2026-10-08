@@ -1,0 +1,455 @@
+/* ==========================================================================
+   FINAL CTA SECTION — PREMIUM STATIC DESIGN
+   Visual Authority: Reference Image (media_1791468091972.png)
+   ========================================================================== */
+
+.final-cta-section {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  background-color: #050b14;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 5.5rem 2.5rem 4rem;
+  box-sizing: border-box;
+}
+
+/* Visibility toggles */
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* 1. RIGHT-SIDE ARCHITECTURAL BACKDROP (DESKTOP) */
+.cta-backdrop-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 62%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.cta-backdrop-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right 45%;
+  opacity: 0.95;
+  filter: contrast(1.05) saturate(1.08);
+}
+
+/* Directional Gradient Dissolve Masks */
+.cta-backdrop-gradient {
+  position: absolute;
+  inset: 0;
+  background: 
+    /* Smooth horizontal blend into left content column */
+    linear-gradient(90deg, #050b14 0%, rgba(5, 11, 20, 0.92) 18%, rgba(5, 11, 20, 0.45) 50%, rgba(5, 11, 20, 0) 80%),
+    /* Top blend from section boundary */
+    linear-gradient(180deg, #050b14 0%, rgba(5, 11, 20, 0.4) 12%, rgba(5, 11, 20, 0) 30%),
+    /* Bottom blend into value strip / footer */
+    linear-gradient(0deg, #050b14 0%, rgba(5, 11, 20, 0.7) 15%, rgba(5, 11, 20, 0) 35%);
+  pointer-events: none;
+}
+
+/* 2. MAIN CONTAINER */
+.final-cta-container {
+  position: relative;
+  z-index: 5;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 3. UPPER CONTENT COLUMN (Left Aligned on Desktop) */
+.cta-content-column {
+  max-width: 620px;
+  width: 100%;
+}
+
+/* Eyebrow with gold horizontal accent line */
+.cta-eyebrow-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.cta-eyebrow-line {
+  width: 38px;
+  height: 1.5px;
+  background: #c9a15a;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.cta-eyebrow-text {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: #c9a15a;
+  text-transform: uppercase;
+}
+
+/* Main Headline */
+.cta-headline {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(2.3rem, 3.8vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin: 0 0 1.35rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.headline-line-1 {
+  display: block;
+}
+
+.cta-headline-highlight {
+  color: #c9a15a;
+  text-shadow: 0 0 24px rgba(201, 161, 90, 0.3);
+  display: block;
+}
+
+/* Supporting Copy */
+.cta-description {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: clamp(0.92rem, 1.1vw, 1.04rem);
+  line-height: 1.65;
+  color: rgba(220, 230, 242, 0.78);
+  margin: 0 0 2.4rem 0;
+  max-width: 560px;
+}
+
+/* Actions Row */
+.cta-actions-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+/* Primary CTA Button */
+.cta-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #edd09a 0%, #c9a15a 100%);
+  color: #070d17;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.95rem 2.2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 
+    0 4px 20px rgba(201, 161, 90, 0.32),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  user-select: none;
+}
+
+.cta-primary-btn:hover {
+  background: linear-gradient(135deg, #f5dfb3 0%, #d8b26d 100%);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 28px rgba(201, 161, 90, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.6);
+}
+
+.cta-btn-arrow {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cta-primary-btn:hover .cta-btn-arrow {
+  transform: translateX(3px);
+}
+
+/* Secondary Direct Contact */
+.cta-secondary-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.cta-phone-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.cta-phone-label {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.cta-secondary-contact:hover .cta-phone-circle {
+  border-color: #c9a15a;
+  background: rgba(201, 161, 90, 0.12);
+  color: #edd09a;
+  box-shadow: 0 0 14px rgba(201, 161, 90, 0.3);
+  transform: scale(1.05);
+}
+
+.cta-secondary-contact:hover .cta-phone-label {
+  color: #edd09a;
+}
+
+/* 4. BOTTOM VALUE PROPOSITION STRIP */
+.cta-value-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-top: 4.5rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  max-width: 900px;
+}
+
+.value-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.value-icon-box {
+  color: #c9a15a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.value-icon {
+  stroke-width: 1.8px;
+}
+
+.value-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.value-title {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.value-desc {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.74rem;
+  color: rgba(210, 225, 240, 0.65);
+  margin: 0;
+}
+
+.value-divider {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (TABLET & MOBILE)
+   ========================================================================== */
+@media (max-width: 1100px) {
+  .cta-backdrop-wrap {
+    width: 52%;
+    opacity: 0.8;
+  }
+  .cta-value-strip {
+    gap: 1.8rem;
+  }
+}
+
+@media (max-width: 900px) {
+  /* Toggle to mobile flow */
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: block !important;
+  }
+
+  .final-cta-section {
+    padding: 4.5rem 1.4rem 3.5rem;
+    min-height: auto;
+    align-items: flex-start;
+  }
+
+  .cta-content-column {
+    max-width: 100%;
+  }
+
+  /* Eyebrow */
+  .cta-eyebrow-wrap {
+    gap: 0.65rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta-eyebrow-line {
+    width: 26px;
+  }
+
+  .cta-eyebrow-text {
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+  }
+
+  /* Headline - clean 2-line break without awkward wrapping */
+  .cta-headline {
+    font-size: clamp(1.85rem, 7.2vw, 2.35rem);
+    line-height: 1.18;
+    margin-bottom: 1.15rem;
+  }
+
+  .cta-headline-highlight {
+    margin-top: 0.2rem;
+  }
+
+  /* Supporting text */
+  .cta-description {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 1.8rem;
+  }
+
+  /* Stack actions vertically with full touch targets */
+  .cta-actions-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.9rem;
+    margin-bottom: 2.2rem;
+  }
+
+  .cta-primary-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 1.05rem 1.5rem;
+    font-size: 0.8rem;
+    box-sizing: border-box;
+  }
+
+  .cta-secondary-contact {
+    width: 100%;
+    justify-content: center;
+    padding: 0.8rem 1rem;
+    gap: 0.75rem;
+    box-sizing: border-box;
+  }
+
+  /* Mobile Architectural Villa Card (Item 6 in recommended flow) */
+  .cta-mobile-image-card {
+    width: 100%;
+    margin: 0.5rem 0 2.5rem 0;
+  }
+
+  .mobile-image-inner {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.75);
+    background-color: #03070d;
+  }
+
+  .mobile-villa-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right 45%;
+    display: block;
+  }
+
+  .mobile-image-glow {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(5, 11, 20, 0) 55%, rgba(5, 11, 20, 0.65) 100%);
+    pointer-events: none;
+  }
+
+  /* Bottom Value Proposition Strip (Item 7 in recommended flow) */
+  .cta-value-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.4rem;
+    margin-top: 0;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .value-divider {
+    display: none;
+  }
+
+  .value-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.95rem;
+    width: 100%;
+  }
+
+  .value-icon-box {
+    margin-top: 2px;
+  }
+
+  .value-title {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .value-desc {
+    font-size: 0.74rem;
+    line-height: 1.45;
+  }
+}

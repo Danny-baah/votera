@@ -1,0 +1,423 @@
+/* ==========================================================================
+   SERVICES SECTION (SECTION 2) - CINEMATIC ELECTRICAL JOURNEY
+   Visual Authority: Reference Image (media_1791464638713.jpg)
+   ========================================================================== */
+
+/* 1. SECTION WRAPPER & PINNED STAGE */
+.services-section-wrapper {
+  position: relative;
+  width: 100%;
+  background-color: #050b14;
+  color: #ffffff;
+  overflow: visible;
+  z-index: 10;
+}
+
+/* Pinned 100vh viewport stage */
+.services-pin-stage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  max-height: 1080px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.5rem 2rem 2.5rem;
+  background: radial-gradient(circle at 50% 28%, rgba(12, 30, 56, 0.5) 0%, rgba(5, 11, 20, 0.98) 75%);
+  box-sizing: border-box;
+}
+
+/* Subtle architectural grid pattern background */
+.services-pin-stage::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(143, 223, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(143, 223, 255, 0.02) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ambient optical glow centered on the electrical junction */
+.services-ambient-glow {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 650px;
+  height: 280px;
+  background: radial-gradient(ellipse at center, rgba(143, 223, 255, 0.12) 0%, rgba(201, 161, 90, 0.04) 50%, transparent 75%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* TOP INCOMING ENERGY ANCHOR (Matches Hero Transition Anchor) */
+.services-entry-anchor {
+  position: absolute;
+  top: 0.95rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  z-index: 15;
+  pointer-events: none;
+}
+
+.entry-anchor-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(143, 223, 255, 0.45);
+  background: rgba(5, 11, 20, 0.88);
+  box-shadow: 0 0 12px rgba(143, 223, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8fdfff;
+}
+
+.entry-anchor-icon {
+  animation: subtleArrowBounce 2s ease-in-out infinite;
+}
+
+.entry-anchor-text {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: rgba(220, 230, 242, 0.7);
+  text-transform: uppercase;
+}
+
+@keyframes subtleArrowBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+}
+
+/* 2. SVG ELECTRICAL CIRCUIT CANVAS */
+.services-circuit-canvas {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1260px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.services-circuit-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Circuit trace glow filters */
+.circuit-pulse-beam {
+  mix-blend-mode: screen;
+}
+
+/* 3. CENTRAL JUNCTION HEADER CONTAINER */
+.services-header-container {
+  position: relative;
+  z-index: 10;
+  margin-top: 5.2rem;
+  padding: 1.25rem 2.5rem 1.15rem;
+  max-width: 760px;
+  width: 90%;
+  text-align: center;
+  border-radius: 20px;
+  background: rgba(8, 17, 29, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(143, 223, 255, 0.16);
+  box-shadow: 
+    0 0 25px rgba(143, 223, 255, 0.06),
+    inset 0 1px 1px rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header Eyebrow */
+.services-eyebrow {
+  display: inline-block;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin-bottom: 0.55rem;
+}
+
+/* Main Headline */
+.services-main-title {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(1.4rem, 2.2vw, 2.1rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  color: #ffffff;
+  margin: 0 0 0.55rem 0;
+}
+
+/* Highlight "JEDER VERBINDUNG." in warm gold */
+.title-highlight {
+  color: #c9a15a;
+  text-shadow: 0 0 18px rgba(201, 161, 90, 0.35);
+  display: inline-block;
+}
+
+/* Subtitle */
+.services-subtitle {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: clamp(0.82rem, 1.05vw, 0.95rem);
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgba(220, 230, 242, 0.75);
+  max-width: 620px;
+  margin: 0;
+}
+
+/* 4. FOUR SERVICE CARDS GRID */
+.services-cards-grid {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.35rem;
+  width: 100%;
+  max-width: 1260px;
+  margin-top: 4.8rem;
+  box-sizing: border-box;
+}
+
+/* 5. INDIVIDUAL SERVICE CARD */
+.service-card {
+  position: relative;
+  background: linear-gradient(180deg, rgba(10, 20, 34, 0.88) 0%, rgba(6, 14, 25, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 0.85rem;
+  box-shadow: 
+    0 16px 36px -10px rgba(0, 0, 0, 0.7),
+    0 0 1px 1px rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.35s ease, 
+              box-shadow 0.35s ease;
+  overflow: visible;
+}
+
+/* Card hover dynamics */
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(143, 223, 255, 0.25);
+  box-shadow: 
+    0 22px 42px -10px rgba(0, 0, 0, 0.85),
+    0 0 20px rgba(143, 223, 255, 0.12);
+}
+
+.service-card.gold-accent:hover {
+  border-color: rgba(201, 161, 90, 0.3);
+  box-shadow: 
+    0 22px 42px -10px rgba(0, 0, 0, 0.85),
+    0 0 20px rgba(201, 161, 90, 0.15);
+}
+
+/* Terminal Contact Dock on Top Center of Card */
+.card-terminal-dock {
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 26px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(143, 223, 255, 0.5);
+  box-shadow: 0 0 8px rgba(143, 223, 255, 0.6);
+  z-index: 12;
+}
+
+.service-card.gold-accent .card-terminal-dock {
+  background: rgba(201, 161, 90, 0.65);
+  box-shadow: 0 0 8px rgba(201, 161, 90, 0.7);
+}
+
+/* Card Thumbnail Wrapper */
+.card-thumb-wrap {
+  position: relative;
+  width: 100%;
+  height: 158px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #03070d;
+}
+
+.card-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-card:hover .card-thumb-img {
+  transform: scale(1.05);
+}
+
+.card-thumb-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 11, 20, 0) 45%, rgba(5, 11, 20, 0.65) 100%);
+  pointer-events: none;
+}
+
+/* Card Body Content */
+.card-body {
+  padding: 1rem 0.6rem 0.4rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-number {
+  font-family: 'Space Grotesk', monospace, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 0.35rem;
+}
+
+.card-title {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  line-height: 1.3;
+  margin: 0 0 0.55rem 0;
+  text-transform: uppercase;
+}
+
+.card-desc {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: rgba(210, 225, 240, 0.72);
+  margin: 0 0 1.1rem 0;
+  flex: 1;
+  min-height: 3.6em;
+}
+
+/* Card Action: Circular Arrow Button & Text */
+.card-action {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: auto;
+  cursor: pointer;
+  user-select: none;
+}
+
+.action-circle-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 161, 90, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c9a15a;
+  background: rgba(201, 161, 90, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.action-arrow-icon {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.action-text {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: #c9a15a;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover .action-circle-btn {
+  background: #c9a15a;
+  color: #050b14;
+  border-color: #c9a15a;
+  box-shadow: 0 0 12px rgba(201, 161, 90, 0.5);
+}
+
+.service-card:hover .action-arrow-icon {
+  transform: translateX(2px);
+}
+
+.service-card:hover .action-text {
+  color: #e5c382;
+}
+
+/* 6. RESPONSIVE MEDIA QUERIES */
+@media (max-width: 1200px) {
+  .services-cards-grid {
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  .card-thumb-wrap {
+    height: 140px;
+  }
+  .card-title {
+    font-size: 0.88rem;
+  }
+  .card-desc {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .services-pin-stage {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 3rem;
+  }
+  .services-circuit-canvas {
+    display: none; /* Simplify on smaller tablets/mobile */
+  }
+  .services-header-container {
+    margin-top: 1rem;
+  }
+  .services-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .services-cards-grid {
+    grid-template-columns: 1fr;
+    margin-top: 1.5rem;
+  }
+  .services-header-container {
+    padding: 1.2rem;
+  }
+}

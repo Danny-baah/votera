@@ -1,0 +1,6 @@
+.app-root {
+  position: relative;
+  width: 100%;
+  background: var(--bg-dark, #050b14);
+  overflow-x: hidden;
+}
